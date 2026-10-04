@@ -1,13 +1,13 @@
 <template>
   <v-app class="links-page">
     <v-container class="py-10">
-      <section class="linkbio mx-auto">
+      <section class="mx-auto linkbio">
         <!-- Header -->
-        <header class="text-center mb-6">
+        <header class="mb-6 text-center">
           <!-- 有頭像就換成 <v-img :src="avatarUrl" class="avatar" cover /> -->
-          <div class="avatar grid place-items-center">夏</div>
+          <div class="grid avatar place-items-center">夏</div>
           <h1 class="mt-4 text-2xl font-bold">夏目</h1>
-          <p class="text-sm text-muted mt-1">社群與聯絡 · Link in bio</p>
+          <p class="mt-1 text-sm text-muted">社群與聯絡 · Link in bio</p>
         </header>
 
         <!-- v-for 產生按鈕 -->
@@ -36,7 +36,6 @@
 </template>
 
 <script setup lang="tsx">
-import { computed } from "vue";
 import site from "../assets/site.json";
 
 definePageMeta({ layout: "blank" });
@@ -64,14 +63,14 @@ const links = computed<LinkItem[]>(() => [
     label: "Discord",
     href: "https://discordapp.com/users/386473957806833664",
     icon: "mdi-discord",
-    hint: "@natsume0304",
+    hint: "@natsume.hsu",
     external: true,
   },
   {
     label: "Facebook",
     href: "https://www.facebook.com/adam200134",
     icon: "mdi-facebook",
-    hint: "@natsume0304",
+    hint: "adam200134",
     external: true,
   },
   {
@@ -100,14 +99,7 @@ const links = computed<LinkItem[]>(() => [
     icon: "mdi-github",
     hint: site.footer.author.name,
     external: true,
-  },
-    {
-    label: "GitHub",
-    href: "https://iruni-button.natssumes.cc",
-    icon: "mdi-link-variant",
-    hint: site.footer.author.name,
-    external: true,
-  },
+  }
 ]);
 </script>
 

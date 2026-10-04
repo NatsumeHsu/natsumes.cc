@@ -1,12 +1,12 @@
 <template>
   <v-container class="py-8">
-    <header class="flex flex-col md:flex-row items-center gap-6 mb-8">
+    <header class="flex flex-col items-center gap-6 mb-8 md:flex-row">
       <v-avatar size="96" color="primary" variant="tonal">
         <v-img :src="site.avatar" :alt="site.title" cover />
       </v-avatar>
       <div>
         <h1 class="text-3xl font-bold text-primary-700">關於我</h1>
-        <p class="text-neutral-700 mt-2">九条夏目 · 工程與內容創作</p>
+        <p class="mt-2 text-neutral-700">九条夏目 · 工程與內容創作</p>
       </div>
     </header>
 
@@ -30,11 +30,11 @@
         </v-card>
 
         <!-- 技術專長 -->
-        <v-card class="rounded-3xl mt-6">
+        <v-card class="mt-6 rounded-3xl">
           <v-card-title class="text-lg">技術專長</v-card-title>
           <v-card-text>
             <ul
-              class="list-disc list-inside grid grid-cols-2 gap-x-8 gap-y-2 text-gray-600 dark:text-gray-300 text-sm"
+              class="grid grid-cols-2 text-sm text-gray-600 list-disc list-inside gap-x-8 gap-y-2 dark:text-gray-300"
             >
               <li>Nuxt3 + TypeScript 前端開發</li>
               <li>API 串接與前後端整合</li>
@@ -47,7 +47,7 @@
         </v-card>
 
         <!-- 學習歷程 -->
-        <v-card class="rounded-3xl mt-6">
+        <v-card class="mt-6 rounded-3xl">
           <v-card-title class="text-lg">學習歷程</v-card-title>
           <v-card-text class="prose max-w-none">
             <p>
@@ -76,7 +76,7 @@
         </v-card>
 
         <!-- 興趣愛好 -->
-        <v-card class="rounded-3xl mt-6">
+        <v-card class="mt-6 rounded-3xl">
           <v-card-title class="text-lg">興趣愛好</v-card-title>
           <v-card-text class="prose max-w-none">
             <p>
@@ -103,14 +103,14 @@
               target="_blank"
               prepend-icon="mdi-discord"
               title="Discord"
-              subtitle="@natsume0304"
+              subtitle="@natsume.hsu"
             />
             <v-list-item
               :href="`https://www.facebook.com/adam200134`"
               target="_blank"
               prepend-icon="mdi-facebook"
               title="Facebook"
-              subtitle="@natsume0304"
+              subtitle="adam200134"
             />
             <v-list-item
               :href="`https://x.com/${site.twitter_user.replace('@', '')}`"
@@ -124,7 +124,7 @@
               target="_blank"
               prepend-icon="mdi-youtube"
               title="Youtube"
-              subtitle="@目頭人"
+              subtitle="@九條夏目Natsume"
             />
             <v-list-item
               href="mailto:adam200134@gmail.com"
@@ -149,7 +149,7 @@
           </v-list>
         </v-card>
 
-        <v-card class="rounded-3xl mt-6">
+        <v-card class="mt-6 rounded-3xl">
           <v-card-title class="text-lg">站點資訊</v-card-title>
           <v-card-text class="text-sm">
             <div class="mb-2">
