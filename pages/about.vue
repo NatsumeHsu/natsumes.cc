@@ -174,7 +174,7 @@
 import site from "../assets/site.json";
 
 useHead({ title: `關於我 · ${site.title}` });
-const glass = 'rounded-3xl bg-white/70 dark:bg-neutral-900/60 backdrop-blur-md border border-white/20 dark:border-white/10'
+const glass = 'rounded-3xl bg-white/90 dark:bg-neutral-900/60 backdrop-blur-md border border-neutral-200 dark:border-white/10'
 
 </script>
 

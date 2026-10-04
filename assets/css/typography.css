@@ -34,6 +34,17 @@ body {
     background: #fff;
 }
 
+/* 淺色主題：區分頁面底色與內容表面。 */
+.v-theme--light .v-card,
+.v-theme--light .v-sheet.rounded-3xl {
+    border: 1px solid rgb(var(--v-theme-surface-variant));
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.v-theme--light .v-card-title {
+    color: rgb(var(--v-theme-primary));
+}
+
 /* 版寬與自動平衡換行 */
 .prose,
 main,

@@ -5,6 +5,7 @@ import colors from 'tailwindcss/colors';
 import theme from './theme.json';
 
 export default {
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {

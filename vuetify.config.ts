@@ -18,7 +18,18 @@ export default defineVuetifyConfiguration({
     defaultTheme: 'light',
     themes: {
       light: {
-        colors: generateThemeFromJson(theme)
+        dark: false,
+        colors: {
+          ...generateThemeFromJson(theme),
+          background: '#f1f5f9',
+          surface: '#ffffff',
+          'surface-variant': '#e2e8f0',
+          'on-background': '#1e293b',
+          'on-surface': '#1e293b',
+          'on-surface-variant': '#475569',
+          'on-primary': '#ffffff',
+          'on-secondary': '#1e293b'
+        }
       }
     }
   }

@@ -71,7 +71,7 @@ import site from '~/assets/site.json'
 const drawer = ref(true)
 const theme = useTheme()
 const isDark = computed(() => theme.global.current.value.dark)
-const barColor = computed(() => (isDark.value ? 'surface-variant' : 'white'))
+const barColor = computed(() => (isDark.value ? 'surface-variant' : 'surface'))
 
 function setTheme (name: 'light' | 'dark') {
   theme.global.name.value = name
@@ -95,6 +95,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.border-b { border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
-:deep(html.dark) .border-b { border-color: rgba(255, 255, 255, 0.08); }
+.border-b { border-bottom: 1px solid rgba(var(--v-theme-on-surface), 0.12); }
 </style>

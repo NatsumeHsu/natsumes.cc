@@ -128,7 +128,7 @@ useHead({
 });
 
 const glass =
-  "rounded-3xl bg-white/70 dark:bg-neutral-900/60 backdrop-blur-md border border-white/20 dark:border-white/10";
+  "rounded-3xl bg-white/90 dark:bg-neutral-900/60 backdrop-blur-md border border-neutral-200 dark:border-white/10";
 
 const skills = [
   "Nuxt 3",
