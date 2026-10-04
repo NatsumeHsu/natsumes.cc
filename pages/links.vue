@@ -1,36 +1,38 @@
 <template>
-  <v-container class="py-10">
-    <section class="linkbio mx-auto">
-      <!-- Header -->
-      <header class="text-center mb-6">
-        <!-- 有頭像就換成 <v-img :src="avatarUrl" class="avatar" cover /> -->
-        <div class="avatar grid place-items-center">夏</div>
-        <h1 class="mt-4 text-2xl font-bold">夏目</h1>
-        <p class="text-sm text-muted mt-1">社群與聯絡 · Link in bio</p>
-      </header>
+  <v-app class="links-page">
+    <v-container class="py-10">
+      <section class="linkbio mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-6">
+          <!-- 有頭像就換成 <v-img :src="avatarUrl" class="avatar" cover /> -->
+          <div class="avatar grid place-items-center">夏</div>
+          <h1 class="mt-4 text-2xl font-bold">夏目</h1>
+          <p class="text-sm text-muted mt-1">社群與聯絡 · Link in bio</p>
+        </header>
 
-      <!-- v-for 產生按鈕 -->
-      <div class="links">
-        <v-btn
-          v-for="link in links"
-          :key="link.label"
-          block
-          :href="link.href"
-          :target="link.external ? '_blank' : undefined"
-          :prepend-icon="link.icon"
-          class="glass-btn"
-          size="large"
-        >
-          {{ link.label }}
-          <span v-if="link.hint" class="hint">{{ link.hint }}</span>
-        </v-btn>
-      </div>
+        <!-- v-for 產生按鈕 -->
+        <div class="links">
+          <v-btn
+            v-for="link in links"
+            :key="link.label"
+            block
+            :href="link.href"
+            :target="link.external ? '_blank' : undefined"
+            :prepend-icon="link.icon"
+            class="glass-btn"
+            size="large"
+          >
+            {{ link.label }}
+            <span v-if="link.hint" class="hint">{{ link.hint }}</span>
+          </v-btn>
+        </div>
 
-      <footer class="mt-6 text-center">
-        <span class="badge">Made with <span class="accent">Vuetify</span></span>
-      </footer>
-    </section>
-  </v-container>
+        <footer class="mt-6 text-center">
+          <span class="badge">Made with <span class="accent">Vuetify</span></span>
+        </footer>
+      </section>
+    </v-container>
+  </v-app>
 </template>
 
 <script setup lang="tsx">
@@ -112,12 +114,10 @@ const links = computed<LinkItem[]>(() => [
 <style scoped>
 .linkbio {
   max-width: 520px;
+  color: rgb(var(--v-theme-on-background));
 }
 .text-muted {
-  color: rgba(0, 0, 0, 0.55);
-}
-:deep(html.dark) .text-muted {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(var(--v-theme-on-background), 0.75);
 }
 
 .avatar {
@@ -142,8 +142,8 @@ const links = computed<LinkItem[]>(() => [
   border-radius: 18px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: color-mix(in oklab, white 55%, transparent);
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.18);
+  background: rgb(var(--v-theme-surface));
   color: rgb(var(--v-theme-on-surface));
   text-transform: none;
   font-weight: 600;
@@ -157,29 +157,22 @@ const links = computed<LinkItem[]>(() => [
 }
 .hint {
   font-weight: 500;
-  opacity: 0.65;
+  color: rgba(var(--v-theme-on-surface), 0.8);
   font-size: 0.9rem;
 }
 
-/* 暗色 */
-:deep(html.dark) .glass-btn {
-  background: color-mix(in oklab, rgb(var(--v-theme-surface)) 70%, transparent);
-  border-color: rgba(255, 255, 255, 0.12);
-}
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 6px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.18);
+  background: rgb(var(--v-theme-surface));
+  color: rgb(var(--v-theme-on-surface));
   font-size: 12px;
 }
-:deep(html.dark) .badge {
-  background: rgba(255, 255, 255, 0.12);
-}
 .accent {
-  color: #38bdf8;
+  color: rgb(var(--v-theme-primary));
 }
 </style>
